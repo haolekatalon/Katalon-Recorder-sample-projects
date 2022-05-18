@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Extract and verify</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">Extract data and verify item price</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo-store.katalon.com/<datalist><option>https://demo-store.katalon.com/</option></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//img[contains(@src,'https://static.zara.net/photos///2018/I/0/1/p/7568/469/251/2/w/1920/7568469251_2_1_1.jpg?ts=1540393989160')]<datalist><option>xpath=//img[contains(@src,'https://static.zara.net/photos///2018/I/0/1/p/7568/469/251/2/w/1920/7568469251_2_1_1.jpg?ts=1540393989160')]</option><option>xpath=//div[@id='root']/div/div/div[2]/div[2]/div/div/img</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Clear All'])[1]/following::img[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Greater Than $89'])[1]/following::img[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Basic Top'])[1]/preceding::img[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='$25.99 CAD'])[1]/preceding::img[1]</option><option>xpath=//img</option><option>css=img.card-img-top</option></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div[3]<datalist><option>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/d</option><option>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div[3]</option></datalist></td><td>displayedPrice</td></tr>
+<tr><td>storeEval</td><td>"${displayedPrice}".substring(0, 6)<datalist><option>"${displayedPrice}".substring(0, 6)</option></datalist></td><td>itemPrice</td></tr>
+<tr><td>verifyEval</td><td>"${itemPrice}"<datalist><option>"${itemPrice}"</option></datalist></td><td>regexp:^[$](\d+\.\d+)</td></tr>
+</tbody></table>
+</body>
+</html>

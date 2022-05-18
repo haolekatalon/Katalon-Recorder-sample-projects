@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Extract item information and write to CSV</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3" data-tags="">Extract item information and write to CSV</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://demo-store.katalon.com/<datalist></datalist></td><td></td></tr>
+<tr><td>click</td><td>xpath=//img[contains(@src,'https://static.zara.net/photos///2018/I/0/1/p/7568/469/251/2/w/1920/7568469251_2_1_1.jpg?ts=1540393989160')]<datalist></datalist></td><td></td></tr>
+<tr><td>storeText</td><td>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div<datalist><option>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='All Products'])[1]/following::div[12]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Zack Market'])[2]/following::div[22]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Round neck long sleeved shirt.'])[1]/preceding::div[1]</option><option>xpath=//*/text()[normalize-space(.)='Basic Top']/parent::*</option><option>xpath=//div[2]/div/div[2]/div/div</option><option>css=div.productOverview_title__2d20j</option></datalist></td><td>itemName</td></tr>
+<tr><td>storeText</td><td>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div[3]<datalist><option>xpath=//div[@id='root']/div/div/div/div[2]/div/div[2]/div/div[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Round neck long sleeved shirt.'])[1]/following::div[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Basic Top'])[1]/following::div[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='COLOUR:'])[1]/preceding::div[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='White'])[1]/preceding::div[3]</option><option>xpath=//*/text()[normalize-space(.)='$']/parent::*</option><option>xpath=//div[2]/div/div[3]</option><option>css=div.productOverview_price__26ak7</option></datalist></td><td>itemPrice</td></tr>
+<tr><td>appendToCSV</td><td>name-price.csv<datalist><option>name-price.csv</option></datalist></td><td>${itemName}, ${itemPrice}</td></tr>
+</tbody></table>
+</body>
+</html>
